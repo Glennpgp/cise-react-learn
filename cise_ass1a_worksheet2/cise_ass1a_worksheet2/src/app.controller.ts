@@ -16,8 +16,8 @@ export class AppController {
     return ARTICLES;
   }
 
-  @Get('/api/articles')
+  @Get('/api/articles/:id')
   getArticlesById(@Param('id') id: string): any[] {
-    return ARTICLES.find((n) => n._id === id);
+    return ARTICLES.find((n) => n.id === id);
   }
 }
